@@ -1,0 +1,103 @@
+*
+{font-family: lato ;}
+.slider-form {
+            position: absolute;
+            top: 3%;
+            width:75%;
+            left: 4%;
+            margin: auto 0;
+            transform: translate(12%, 50px);
+        }
+        
+        .form-bg {
+           
+            padding: 21px 30px;
+            background:rgba(0,0,0,.5); 
+            color:#fff;
+               
+        }
+        
+        .col-md-offset-8 {
+            margin-left: 0;
+        }
+        .datefix{
+            
+            padding-right:10px;
+            padding-left:1px;
+        }
+ 	.datefix-left{
+            
+            padding-right:1px;
+            padding-left:10px;
+        }
+       .submitmargin {
+            
+    margin-top: 60px;
+    padding: 8px 66px;
+    margin-left: 396px;
+        }
+        .form-control{
+            padding: 6px;
+        }
+        .form-bg .fa{
+            font-size: 20px;
+        }
+	
+        label {
+  
+    font-family: lato;
+    font-weight: 200;
+}
+input[type=checkbox], input[type=radio]
+{
+    margin: 5px 8px 0 0;
+   position: relative;
+    top: 2px;
+}
+
+
+/**celender dev**/
+.icon-data {
+    position: absolute;
+    top: 92%;
+    right: 3%;
+    color: #fff;
+    z-index: 99999;
+}
+a.sort-data {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 300px;
+}
+.full-descript {
+    text-align: justify;
+    position: absolute;
+    top: 28%;
+    left: 13%;
+    width: 75%;
+    background: rgba(0, 0, 0, 0.27);
+    color: #e0e0e0;
+    line-height: 17px;
+}
+.icon-data i{
+    cursor: pointer;
+    font-size: 21px;
+}
+.grid-list i{
+    padding-right: 10px;
+}
+.list-group-item{
+    width:100%;
+}
+.list-color{
+    color: #fb6364;
+}
+ .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 100%;
+                margin: auto;
+            }

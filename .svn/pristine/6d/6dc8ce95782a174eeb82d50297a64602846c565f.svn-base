@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    
+  <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/jquery-ui.css">
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Full Slider - Start Bootstrap Template</title>
+   
+ 
+    <!-- Bootstrap Core CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="public/css/full-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .slider-form {
+            position: absolute;
+            top: 3%;
+            width:75%;
+            left: 2%;
+            margin: auto 0;
+            transform: translate(12%, 100px);
+        }
+        
+        .form-bg {
+           
+            padding: 21px 30px;
+            background:rgba(0,0,0,.5); 
+            color:#fff;
+               
+        }
+        
+        .col-md-offset-8 {
+            margin-left: 0;
+        }
+        .datefix{
+            
+            padding-right:1px;
+            padding-left:1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('public/images/slide1.jpg');"></div>
+
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('public/images/slide2.jpg');"></div>
+
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('public/images/slide3.jpg');"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+           
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+           
+        </a>
+
+        <div class="row slider-form form-bg ">
+            <div class="col-md-offset-8 col-md-6">
+                <?php echo e(Form::open(array('method' => 'post'))); ?>
+
+                <div class="form-group">
+
+                    <?php echo e(Form::label('location', 'Location')); ?> <?php echo e(Form::select('location', array('Singapur' => 'Singapur', 'India' => 'India',), 'Singapur', ['class' => 'form-control' ])); ?>
+
+                </div>
+                <div class="form-group">
+                    <?php echo e(Form::label('category', 'Category')); ?> <?php echo e(Form::select('size', array('1' => '1', '2' => '2','3'=>'3','4'=>'4','5'=>'5'), '1', ['class' => 'form-control' ])); ?>
+
+                </div>
+                 <div class='col-md-6 datefix'>
+        <div class="form-group">
+             <?php echo e(Form::label('from', 'From')); ?>
+
+            <div class='input-group date' id='datetimepicker6'>
+               <?php echo e(Form::text('date','',['class' => 'form-control'] )); ?>
+
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+                  <div class='col-md-6 datefix'>
+        <div class="form-group">
+             <?php echo e(Form::label('to', 'To')); ?>
+
+            <div class='input-group date' id='datetimepicker7'>
+                <?php echo e(Form::text('date','',['class' => 'form-control'] )); ?>
+
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+                
+                <div>
+  <p>
+    Price Range:<p id="amount"></p>
+  </p>
+
+  <div id="slider-range"></div>
+    <input type="hidden" id="amount1">
+    <input type="hidden" id="amount2">
+    </div>
+                
+            </div>
+
+            <div class="col-md-offset-8 col-md-6">
+                <?php echo e(Form::open(array('method' => 'post'))); ?>
+
+                
+                
+                   <div class="form-group">
+                    <?php echo e(Form::label('rating', 'Rating')); ?>
+
+                     <div class="form-group">
+                  <div id="stars-green" data-rating="1"></div>
+                  
+      
+                  </div>
+                </div>
+             
+                
+                <div class="form-group">
+                    <?php echo e(Form::label('destination_type', 'Destination Type')); ?>
+
+                      <div class="form-group" style="padding-top:7px;">
+                    <?php echo e(Form::label('metropolis', 'Metropolis')); ?> <?php echo e(Form::checkbox('metropolis', 'value')); ?> <?php echo e(Form::label('beach', 'Beach')); ?> <?php echo e(Form::checkbox('beach', 'value')); ?> <?php echo e(Form::label('nature', 'Nature')); ?> <?php echo e(Form::checkbox('nature', 'value')); ?> <?php echo e(Form::label('culture', 'Culture')); ?> <?php echo e(Form::checkbox('culture', 'value')); ?>
+
+
+                </div>
+                </div>
+              
+                <div class="form-group">
+                    <?php echo e(Form::label('medium_type', 'Medium')); ?>
+
+                    
+                      <div class="form-group" style="padding-top:10px;">
+                    <?php echo e(Form::label( '','',array('class'=>'fa fa-plane'))); ?> <?php echo e(Form::radio('name', 'value')); ?>  <?php echo e(Form::label( '','',array('class'=>'fa fa-train'))); ?> <?php echo e(Form::radio('name', 'value')); ?>  <?php echo e(Form::label( '','',array('class'=>'fa fa-car'))); ?> <?php echo e(Form::radio('name', 'value')); ?>  <?php echo e(Form::label( '','',array('class'=>'fa fa-bus'))); ?> <?php echo e(Form::radio('name', 'value')); ?>
+
+                </div>
+                </div>
+              <div class="from-group">
+                   <div class='col-md-6 datefix'>
+ <?php echo e(Form::label('adult', 'Adult')); ?> <?php echo e(Form::select('people', array('1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5'), '1', ['class' => 'form-control' ])); ?>
+
+</div>
+                  </div>
+                <div class="from-group">
+                   <div class='col-md-6 datefix'>
+ <?php echo e(Form::label('child', 'Child')); ?> <?php echo e(Form::select('people', array('1' => '1', '2' => '2','3' => '3','4' => '4','5' => '5'), '1', ['class' => 'form-control' ])); ?>
+
+</div>
+                  </div>
+                    </div>
+            
+                 <div class="form-group" style="padding-top:10px;">
+
+                   <?php echo e(Form::submit('Submit!',['class' => 'btn btn-primary'] )); ?>
+
+                </div>
+
+                <?php echo e(Form::close()); ?>
+
+
+        
+
+        </div>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Full Slider by Start Bootstrap</h1>
+                <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the <code>full-slider.css</code>file.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    
+
+    <script type="text/javascript" src="public/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="public/js/moment.js"></script>
+  <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/js/bootstrap-datetimepicker.min.js"></script>
+
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
+
+<script type="text/javascript">
+    jQuery(function (e) {
+         jQuery('#datetimepicker6').datetimepicker();
+         jQuery('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+         jQuery("#datetimepicker6").on("dp.change", function (e) {
+            jQuery('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+         jQuery("#datetimepicker7").on("dp.change", function (e) {
+             jQuery('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+$("#stars-green").rating('create',{coloron:'gold'});
+});
+
+</script>
+     <script type="text/javascript" src="public/js/ratings.js"></script>
+     
+<script type="text/javascript">
+  
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 10000,
+      values: [ 500, 5000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		$( "#amount1" ).val(ui.values[ 0 ]);
+		$( "#amount2" ).val(ui.values[ 1 ]);
+      }
+    });
+    $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+  </script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="public/js/jquery-ui.js"></script>
+
+</body>
+
+</html>

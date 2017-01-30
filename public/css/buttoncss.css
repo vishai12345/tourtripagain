@@ -1,0 +1,38 @@
+.subbutton {
+  border-radius: 4px;
+  background-color: #3097D1;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.subbutton .subspan {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.subbutton .subspan:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.subbutton:hover .subspan {
+  padding-right: 25px;
+}
+
+.subbutton:hover .subspan:after {
+  opacity: 1;
+  right: 0;
+}

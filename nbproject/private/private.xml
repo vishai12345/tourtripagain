@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/tourtrip/app/Repo/SearchRepo.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/resources/views/search-results.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/app/Http/Controllers/SearchController.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/resources/views/index.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/public/css/trip.css</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/tourtrip/app/Services/DestinationService.php</file>
+        </group>
+    </open-files>
+</project-private>
